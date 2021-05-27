@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            P78
+        </title>
+    </head>
+    <body>
+        <h1>
+            My Family Book
+        </h1>
+        <br>
+        <br>
+        <img src="https://thumbs.dreamstime.com/b/mother-portrait-beautiful-woman-long-brown-hair-young-standing-maternity-mom-vector-illustration-86364538.jpg"
+        style="width: 30%;" id="family_mem_image">
+        <h4 id="family_mem_names"></h4>
+        <button onclick="update();">Next</button>
+        <script>
+            var images=
+            ["https://thumbs.dreamstime.com/b/mother-portrait-beautiful-woman-long-brown-hair-young-standing-maternity-mom-vector-illustration-86364538.jpg",
+            "https://img-new.cgtrader.com/items/2253684/eb7f9d7c8f/cartoon-cute-father-man-3d-model-3d-model-obj-fbx-ma.jpg",
+            "https://images.assetsdelivery.com/compings_v2/vectorkif/vectorkif1902/vectorkif190200052.jpg",
+            "https://us.123rf.com/450wm/yupiramos/yupiramos1905/yupiramos190534185/122724605-little-girl-kid-character-vector-illustration-design.jpg?ver=6"];
+
+            var names=["Rekha Saini","Kuldip Kumar Saini","Khanak Saini","Hitisha Saini"];
+
+            var i=0;
+            function update()
+            {
+                i++;
+                var num_of_family_mem_in_array=4
+                if(i > num_of_family_mem_in_array)
+            {
+            i=0
+            }
+                var update_image=images[i];
+                var update_name=names[i];
+                document.getElementById("family_mem_image").src=update_image;
+                document.getElementById("family_mem_names").innerHTML=update_name;
+            }
+        </script>
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+    </body>
+</html>
